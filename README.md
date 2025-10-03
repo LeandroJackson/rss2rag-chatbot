@@ -45,5 +45,46 @@ O objetivo é fornecer respostas fundamentadas exclusivamente nas informações 
 
 1. **Clone o repositório**  
    ```bash
-   git clone https://github.com/seu-usuario/chatbot-noticias-rag.git
+   git clone https://github.com/LeandroJackson/rss2rag-chatbot.git
    cd chatbot-noticias-rag
+````
+
+2. **Crie e ative um ambiente virtual**
+
+   ```bash
+   python -m venv venv
+   # Windows
+   .\venv\Scripts\activate
+   # Linux / macOS
+   source venv/bin/activate
+   ```
+
+3. **Instale as dependências**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+   *Nota: a instalação do PyTorch pode variar conforme o sistema e a versão do CUDA. Consulte o [site oficial do PyTorch](https://pytorch.org/get-started/locally/) caso haja erros.*
+
+4. **Execute o Jupyter Notebook**
+
+   ```bash
+   jupyter notebook PLN_PROJETO.ipynb
+   ```
+
+5. No notebook, execute as células em ordem para acompanhar o processo de coleta, indexação e geração de respostas.
+
+## Exemplo de Uso
+
+O usuário pode fazer perguntas sobre eventos atuais e o chatbot buscará as notícias mais relevantes para formular a resposta.
+
+**Exemplo de Pergunta 1**
+
+> `Quais as novidades sobre a prefeitura de João Pessoa?`
+
+**Exemplo de Pergunta 2**
+
+> `O dólar incidiu em apreciação ou em depreciação?`
+
+O sistema recupera os documentos de contexto e gera uma resposta formal, como mostrado nos exemplos do notebook.
