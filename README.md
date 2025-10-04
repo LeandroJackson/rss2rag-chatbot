@@ -39,52 +39,44 @@ O objetivo é fornecer respostas fundamentadas exclusivamente nas informações 
 ## Execução do Projeto
 
 **Requisitos de Hardware**  
-- Para executar o LLM, é recomendável uma GPU NVIDIA com suporte a CUDA e pelo menos 8GB de VRAM.  
+- Para executar o LLM, é recomendável uma GPU NVIDIA com suporte a CUDA e pelo menos 12GB de VRAM.  
 
-**Passos para Instalação**  
 
-1. **Clone o repositório**  
+## Passos para Execução
+
+1. **Clone o repositório**
+
    ```bash
    git clone https://github.com/LeandroJackson/rss2rag-chatbot.git
-   cd chatbot-noticias-rag
-````
-
-2. **Crie e ative um ambiente virtual**
-
-   ```bash
-   python -m venv venv
-   # Windows
-   .\venv\Scripts\activate
-   # Linux / macOS
-   source venv/bin/activate
+   cd rss2rag-chatbot
    ```
 
-3. **Instale as dependências**
+2. **Instale o Jupyter Notebook** (se ainda não tiver)
 
    ```bash
-   pip install -r requirements.txt
+   pip install notebook
    ```
 
-   *Nota: a instalação do PyTorch pode variar conforme o sistema e a versão do CUDA. Consulte o [site oficial do PyTorch](https://pytorch.org/get-started/locally/) caso haja erros.*
-
-4. **Execute o Jupyter Notebook**
+3. **Execute o Jupyter Notebook**
 
    ```bash
-   jupyter notebook PLN_PROJETO.ipynb
+   jupyter notebook rss2rag.ipynb
    ```
 
-5. No notebook, execute as células em ordem para acompanhar o processo de coleta, indexação e geração de respostas.
+4. No notebook, execute as células em ordem. A primeira célula já contém a instalação de todas as dependências necessárias, portanto não é preciso instalar manualmente via terminal.
+
+---
 
 ## Exemplo de Uso
 
 O usuário pode fazer perguntas sobre eventos atuais e o chatbot buscará as notícias mais relevantes para formular a resposta.
 
-**Exemplo de Pergunta 1**
+**Exemplo de Pergunta 1:**
 
 > `Quais as novidades sobre a prefeitura de João Pessoa?`
 
-**Exemplo de Pergunta 2**
+**Exemplo de Pergunta 2:**
 
 > `O dólar incidiu em apreciação ou em depreciação?`
 
-O sistema recupera os documentos de contexto e gera uma resposta formal, como mostrado nos exemplos do notebook.
+O sistema recupera os documentos de contexto e gera uma resposta formal, conforme demonstrado no notebook.
